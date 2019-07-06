@@ -11,22 +11,41 @@
 
 <body>
 
-  <header class="header">
+  <div class="menu">
 
-    <div class="logo">
-      <span class="logo__title">Portsmouth</span>
-      <span class="logo__subtitle">Barbers</span>
-    </div>
+    <div class="btn-hamburger btn-hamburger--close">menu<span class="dot">.</span></div>
 
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item"><a href="#" class="nav__link">we are</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">workshop</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">price</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">contact</a></li>
+    <nav class="menu-nav">
+      <ul class="menu-nav__list">
+        <li class="menu-nav__item"><a href="#" class="menu-nav__link">we are</a></li>
+        <li class="menu-nav__item"><a href="#" class="menu-nav__link">workshop</a></li>
+        <li class="menu-nav__item"><a href="#" class="menu-nav__link">price</a></li>
+        <li class="menu-nav__item"><a href="#" class="menu-nav__link">contact</a></li>
       </ul>
     </nav>
+  </div>
+
+  <header class="header">
+    <div class="logo-container">
+      <div class="header__logo">
+        <span class="logo__title">Portsmouth</span>
+        <span class="logo__subtitle">Barbers</span>
+      </div>
+
+      <div class="btn-hamburger btn-hamburger--open">menu<span class="dot">.</span></div>
+    </div>
+
   </header>
+
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item"><a href="#" class="nav__link">contact</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">price</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">workshop</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">we are</a></li>
+    </ul>
+  </nav>
+
   <script src="script/main.js"></script>
 </body>
 

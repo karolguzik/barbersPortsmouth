@@ -1,0 +1,42 @@
+.nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: rotate(-90deg) translateY(-50%);
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-98%);
+    background-color: $color-gray-1;
+    transition: .4s ease-out;
+    z-index: -1;
+  }
+
+  &__item:hover::before {
+    transform: translateX(0);
+  }
+
+  &__item:hover &__link {
+    color: $color-black;
+  }
+
+  &__link {
+    color: $color-gray-1;
+    transition: .3s ease-out;
+  }
+
+}

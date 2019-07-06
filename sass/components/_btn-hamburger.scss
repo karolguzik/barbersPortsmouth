@@ -1,0 +1,25 @@
+.btn-hamburger {
+  color: $color-gray-1;
+  font-size: 2rem;
+  cursor: pointer;
+
+
+  &--open {
+    // position: absolute;
+  }
+
+  &--close {
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+  }
+
+  &:hover {
+    color: lighten($color-gray-1, 10%);
+  }
+}
+
+.dot {
+  margin-left: .5rem;
+  color: $color-brown;
+}
