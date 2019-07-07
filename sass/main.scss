@@ -4,11 +4,17 @@
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
+
 @import "base/animations";
 
 @import "layout/menu";
 @import "layout/header";
 @import "layout/navigation";
 @import "layout/footer";
+@import "layout/grid";
 
 @import "components/btn-hamburger";
+@import "components/switch-box";
+@import "components/icons";
+
+@import "pages/home";

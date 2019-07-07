@@ -6,35 +6,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Barbers Portsmouth</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
-  <div class="menu">
+  <div class="menu menu-js">
+    <div class="btn-hamburger btn-hamburger--close"></div>
 
-    <div class="btn-hamburger btn-hamburger--close">menu<span class="dot">.</span></div>
+    <div class="title-container">
+      <div class="title__primary">
+        <span class="title__primary--big">Portsmouth</span>
+        <span class="title__primary--small">Barbers</span>
+      </div>
+      <div class="title__secondary">welcome</div>
+    </div>
 
-    <nav class="menu-nav">
+    <div class="icons-container">
+      <div class="icon icon--1">
+        <img class="icon-fb" src="img/facebook-white.png" alt="facebook">
+      </div>
+      <div class="icon icon--2">
+        <img class="icon-msg" src="img/messenger-white.png" alt="facebook">
+      </div>
+    </div>
+
+
+
+    <!-- <nav class="menu-nav">
       <ul class="menu-nav__list">
         <li class="menu-nav__item"><a href="#" class="menu-nav__link">we are</a></li>
         <li class="menu-nav__item"><a href="#" class="menu-nav__link">workshop</a></li>
         <li class="menu-nav__item"><a href="#" class="menu-nav__link">price</a></li>
         <li class="menu-nav__item"><a href="#" class="menu-nav__link">contact</a></li>
       </ul>
-    </nav>
+    </nav> -->
   </div>
 
   <header class="header">
-    <div class="logo-container">
-      <div class="header__logo">
-        <span class="logo__title">Portsmouth</span>
-        <span class="logo__subtitle">Barbers</span>
-      </div>
+    <div class="btn-hamburger btn-hamburger--open"></div>
 
-      <div class="btn-hamburger btn-hamburger--open">menu<span class="dot">.</span></div>
+    <div class="switch-container">
+      <div class="switch-box active"></div>
+      <div class="switch-box"></div>
+      <div class="switch-box"></div>
     </div>
-
   </header>
 
   <nav class="nav">
@@ -45,6 +61,98 @@
       <li class="nav__item"><a href="#" class="nav__link">we are</a></li>
     </ul>
   </nav>
+
+  <main>
+    <section class="about">
+      <div class="margin-big">
+        <h2 class="heading-secondary heading-secondary--left">
+          <span class="heading-secondary--main">We</span>
+          <span class="heading-secondary--sub">are</span>
+        </h2>
+      </div>
+
+      <p class="about__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo enim facere, minus
+        repudiandae perferendis minima dolor porro nihil fuga autem quis neque, ipsam nisi sunt et tempore. Dignissimos
+        dolor labore sunt unde architecto quibusdam modi accusamus, nam possimus asperiores expedita maiores saepe
+        corrupti vel, aspernatur quo quasi nobis impedit nesciunt!</p>
+    </section>
+
+    <section class="workshop">
+      <div class="margin-bigger">
+        <h2 class="heading-secondary heading-secondary--right">Workshop</h2>
+      </div>
+
+      <div class="workshop-gallery">
+        <div class="gallery-1">
+          <img src="img/hair1.jpg" alt="hair">
+        </div>
+        <div class="gallery-2">
+          <img src="img/hair2.jpg" alt="hair">
+        </div>
+        <div class="gallery-3">
+          <img src="img/hair3.jpg" alt="hair">
+        </div>
+        <div class="gallery-4">
+          <img src="img/hair4.jpg" alt="hair">
+        </div>
+        <div class="gallery-5"></div>
+        <div class="gallery-6">
+          <img src="img/hair5.jpg" alt="hair">
+        </div>
+        <div class="gallery-7">skin fade</div>
+        <div class="gallery-8">
+          <img src="img/hairkid.jpg" alt="hair">
+        </div>
+        <div class="gallery-9">eyebrown threading</div>
+        <div class="gallery-10">
+          <img src="img/hairkid2.jpg" alt="hair">
+        </div>
+        <div class="gallery-11">
+          <img src="img/hairkid3.jpg" alt="hair">
+        </div>
+        <div class="gallery-12">
+          <img src="img/hair6.jpg" alt="hair">
+        </div>
+        <div class="gallery-13">kid</div>
+        <div class="gallery-14">scissor cut</div>
+      </div>
+    </section>
+
+    <section class="price">
+      <div class="margin-big">
+        <h2 class="heading-secondary heading-secondary--right">Price list</h2>
+      </div>
+
+      <div class="list">
+        <div class="list__name">
+          <li>Cut & Wash</li>
+          <li>Skin Fade Haircut</li>
+          <li>Scissor Cut</li>
+          <li>Hair Cut</li>
+          <li>Student Hair Cut</li>
+          <li>Children's Hair Cut</li>
+          <li>Beard Shave</li>
+          <li>Beard Trim</li>
+          <li>O.A.P.</li>
+          <li>1.2.3. ALL OVER</li>
+          <li>Eyebrow Threading</li>
+        </div>
+        <div class="list__price">
+          <li>f12</li>
+          <li>f10</li>
+          <li>f10</li>
+          <li>f9</li>
+          <li>f8</li>
+          <li>f8</li>
+          <li>f10</li>
+          <li>f6</li>
+          <li>f8</li>
+          <li>f8</li>
+          <li>f5</li>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <script src="script/main.js"></script>
 </body>

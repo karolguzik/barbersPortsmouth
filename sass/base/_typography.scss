@@ -10,42 +10,49 @@ body {
 }
 
 
+.btn-hamburger {
+  font-size: 2rem;
+  color: $color-gray-1;
 
-.header {
+  &--close {
+    color: $color-black;
+  }
+}
 
-  &__logo {
+.menu {
 
-    &__title {
-      font-size: 4rem;
-      letter-spacing: .5rem;
+  .title__primary {
+    letter-spacing: .4rem;
+
+    &--big {
+      font-size: 8rem;
     }
 
-    &__subtitle {
-      font-size: 2rem;
-      letter-spacing: .3rem;
+    &--small {
+      font-size: 5rem;
     }
+  }
+
+  .title__secondary {
+    font-size: 3rem;
+    color: $color-gray-1;
   }
 }
 
 
 
-
-
 .nav {
-  margin-left: -12rem;
 
   &__list {
     list-style: none;
   }
 
   &__item {
-    margin-left: 1.2rem;
-    padding: .5rem 1rem;
     text-align: center;
-
   }
 
   &__link {
+    color: $color-gray-1;
     font-size: 2rem;
     text-decoration: none;
     letter-spacing: .3rem;
@@ -53,8 +60,27 @@ body {
 }
 
 
+.heading-secondary {
+  font-size: 6rem;
+  text-transform: uppercase;
+
+  &>* {
+    display: block;
+  }
+
+  &--left {
+    padding-left: 20rem;
+  }
+
+  &--right {
+    padding-right: 20rem;
+    text-align: right;
+  }
+}
 
 
-.menu__nav {
-  font-size: 3rem;
+.about__desc {
+  font-size: $default-font-size;
+  line-height: 1.6;
+  color: $color-primary;
 }

@@ -1,0 +1,47 @@
+.about {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  // display: flex;
+  &__desc {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.workshop {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.price {
+  padding-bottom: .5rem;
+  // height: 100vh;
+  background-color: #111;
+  color: white;
+}
+
+.list {
+  font-size: $default-font-size;
+  // padding: 10rem;
+  display: flex;
+  margin-left: 10rem;
+  list-style: none;
+
+  &__name {
+    border-right: 1px solid white;
+    padding-right: 3rem;
+
+    &>li {
+      padding: 1rem;
+    }
+  }
+
+  &__price {
+    padding-left: 3rem;
+
+    &>li {
+      padding: 1rem;
+    }
+  }
+}
