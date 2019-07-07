@@ -1,0 +1,36 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 20rem;
+  background-color: $color-black-light;
+
+  &__title {
+
+    &--big {}
+
+    &--small {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.social-media {
+  align-self: center;
+}
+
+.fb {
+  padding-right: 1rem;
+  border-right: 1px solid $color-gray-1;
+
+  &:hover {
+    color: $color-gray-2;
+  }
+}
+
+.msg {
+  padding-left: 1rem;
+
+  &:hover {
+    color: $color-gray-2;
+  }
+}

@@ -1,8 +1,8 @@
-const slideList = ['../../img/header.jpg', '../../img/header2.jpg', '../../img/header3.jpg']
+const slideList = ['img/header.jpg', 'img/header2.jpg', 'img/header3.jpg']
 
-const headerImg = document.querySelector('.header');
+const headerSlider = document.querySelector('.header__slider');
 const dots = [...document.querySelectorAll('.switch-box')];
-const time = 3000;
+const time = 4000;
 let active = 0;
 
 function changeSwitches() {
@@ -14,7 +14,7 @@ function changeSwitches() {
 function changeImage() {
   active++;
   if (active === slideList.length) active = 0;
-  headerImg.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(${slideList[active]});`
+  headerSlider.src = slideList[active];
   changeSwitches();
 }
 
@@ -22,19 +22,37 @@ function changeImage() {
 
 
 function showMenu() {
-  document.querySelector('.menu-js').style.transform = 'translate(0)';
-  document.querySelector('.menu-js').style.position = 'sticky';
-  document.querySelector('.menu-js').style.overflow = 'hidden';
+  setTimeout(function () {
+    document.querySelector('.nav-js').style.display = 'none';
+    document.querySelector('.switch-js').style.display = 'none';
+    document.querySelector('.header-hamburger').style.display = 'none';
+  }, 200);
+
+  setTimeout(function () {
+    document.querySelector('.menu-js').style.display = 'flex';
+    document.querySelector('.menu-js').style.opacity = '.8';
+    document.querySelector('.menu-js').style.position = 'fixed';
+    document.querySelector('.menu-js').style.overflow = 'hidden';
+  }, 200);
 
 }
+
 
 function hideMenu() {
-  document.querySelector('.menu-js').style.transform = 'translate(100%)';
-  document.querySelector('.menu-js').style.position = 'absolute';
+  setTimeout(function () {
+    document.querySelector('.menu-js').style.opacity = '0';
+    document.querySelector('.menu-js').style.position = 'absolute';
+  }, 100);
+
+  setTimeout(function () {
+    document.querySelector('.nav-js').style.display = 'block';
+    document.querySelector('.switch-js').style.display = 'block';
+    document.querySelector('.header-hamburger').style.display = 'block';
+  }, 400);
 
 }
 
-document.querySelector('.btn-hamburger--open').addEventListener('click', showMenu);
-document.querySelector('.btn-hamburger--close').addEventListener('click', hideMenu);
+document.querySelector('.header-hamburger').addEventListener('click', showMenu);
+document.querySelector('.menu-hamburger').addEventListener('click', hideMenu);
 
 // hideEntry();

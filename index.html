@@ -12,48 +12,37 @@
 <body>
 
   <div class="menu menu-js">
-    <div class="btn-hamburger btn-hamburger--close"></div>
-
-    <div class="title-container">
-      <div class="title__primary">
-        <span class="title__primary--big">Portsmouth</span>
-        <span class="title__primary--small">Barbers</span>
-      </div>
-      <div class="title__secondary">welcome</div>
+    <div class="menu-top">
+      <div class="menu-logo">Portsmouth <span class="menu-logo--sub">Barbers</span></div>
+      <div class="hamburger menu-hamburger">CLOSE</div>
     </div>
 
-    <div class="icons-container">
-      <div class="icon icon--1">
-        <img class="icon-fb" src="img/facebook-white.png" alt="facebook">
-      </div>
-      <div class="icon icon--2">
-        <img class="icon-msg" src="img/messenger-white.png" alt="facebook">
-      </div>
-    </div>
-
-
-
-    <!-- <nav class="menu-nav">
+    <nav class="menu-nav">
       <ul class="menu-nav__list">
-        <li class="menu-nav__item"><a href="#" class="menu-nav__link">we are</a></li>
-        <li class="menu-nav__item"><a href="#" class="menu-nav__link">workshop</a></li>
-        <li class="menu-nav__item"><a href="#" class="menu-nav__link">price</a></li>
-        <li class="menu-nav__item"><a href="#" class="menu-nav__link">contact</a></li>
+        <li class="menu-nav__item"><a href="#" class="menu-nav__link"><span class="menu-nr">01</span>we are</a></li>
+        <li class="menu-nav__item"><a href="#" class="menu-nav__link"><span class="menu-nr">02</span>workshop</a></li>
+        <li class="menu-nav__item"><a href="#" class="menu-nav__link"><span class="menu-nr">03</span>price</a></li>
+        <li class="menu-nav__item"><a href="#" class="menu-nav__link"><span class="menu-nr">04</span>contact</a></li>
       </ul>
-    </nav> -->
+    </nav>
+
+    <div class="menu-social-media">
+      <a href="#" class="menu-fb">facebook</a>
+      <a href="#" class="menu-msg">messenger</a>
+    </div>
   </div>
 
   <header class="header">
-    <div class="btn-hamburger btn-hamburger--open"></div>
+    <div class="hamburger header-hamburger">MENU</div>
 
-    <div class="switch-container">
+    <div class="switch-container switch-js">
       <div class="switch-box active"></div>
       <div class="switch-box"></div>
       <div class="switch-box"></div>
     </div>
   </header>
 
-  <nav class="nav">
+  <nav class="nav nav-js">
     <ul class="nav__list">
       <li class="nav__item"><a href="#" class="nav__link">contact</a></li>
       <li class="nav__item"><a href="#" class="nav__link">price</a></li>
@@ -113,7 +102,7 @@
         <div class="gallery-12">
           <img src="img/hair6.jpg" alt="hair">
         </div>
-        <div class="gallery-13">kid</div>
+        <div class="gallery-13">beard shave</div>
         <div class="gallery-14">scissor cut</div>
       </div>
     </section>
@@ -152,7 +141,45 @@
         </div>
       </div>
     </section>
+
+    <section class="contact">
+      <div class="margin-big">
+        <h2 class="heading-secondary heading-secondary--left">Contact</h2>
+      </div>
+
+      <div class="contact-content">
+        <div class="open">
+          <div class="open__title">Opening hours:</div>
+          <div class="open__day">Mon - Sat.</div>
+          <div class="open__time">9:30 - 18:00</div>
+        </div>
+
+        <div class="address">
+          <ul class="address__list">
+            <li class="address__item">61 Fawcett Road</li>
+            <li class="address__item">PO40 Portsmouth</li>
+            <li class="address__item">07856 139886</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="google-map">
+        <img src="img/googlemap.png" alt="Google Map" class="google-map-img">
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <h2 class="footer__title">
+      <span class="footer__title--big">Portsmouth</span>
+      <span class="footer__title--small">Barbers</span>
+    </h2>
+
+    <div class="social-media">
+      <a href="#" class="fb">facebook</a>
+      <a href="#" class="msg">messenger</a>
+    </div>
+  </footer>
 
   <script src="script/main.js"></script>
 </body>

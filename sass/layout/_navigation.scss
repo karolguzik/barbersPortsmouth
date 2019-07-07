@@ -1,10 +1,10 @@
 .nav {
   margin-left: -12rem;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 0;
   transform: rotate(-90deg) translateY(-50%);
-  z-index: 11;
+  // z-index: 11;
 
   &__list {
     display: flex;
@@ -27,6 +27,7 @@
     transition: .4s ease-out;
     z-index: -1;
   }
+
 
   &__item:hover::before {
     transform: translateX(0);

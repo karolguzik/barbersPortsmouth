@@ -1,3 +1,7 @@
-.menuShow {
-  transform: translate(0);
+.menuActive {
+  opacity: 1;
+}
+
+.menuSticky {
+  position: sticky;
 }

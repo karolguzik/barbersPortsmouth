@@ -1,6 +1,7 @@
 .about {
   max-width: 1280px;
   margin: 0 auto;
+  padding: 10rem;
 
   // display: flex;
   &__desc {
@@ -12,21 +13,18 @@
 .workshop {
   max-width: 1280px;
   margin: 0 auto;
+  padding: 10rem;
 }
 
 .price {
-  padding-bottom: .5rem;
-  // height: 100vh;
-  background-color: #111;
-  color: white;
+  padding: 10rem;
+  background-color: $color-black-light;
 }
 
 .list {
-  font-size: $default-font-size;
-  // padding: 10rem;
   display: flex;
-  margin-left: 10rem;
-  list-style: none;
+  width: 50%;
+  margin: 0 auto;
 
   &__name {
     border-right: 1px solid white;
@@ -44,4 +42,48 @@
       padding: 1rem;
     }
   }
+}
+
+.contact {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 15rem 10rem 10rem 10rem;
+
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+
+
+.address {
+  &__list {}
+
+  &__item {
+    padding: 1rem 0;
+  }
+}
+
+
+.open {
+  display: flex;
+
+  &>* {
+    padding: 2rem;
+    align-self: center;
+  }
+
+  &__title {
+    border-right: 1px solid $color-black-light;
+  }
+
+  &__day {}
+
+  &__time {}
+}
+
+
+.google-map {
+  margin: 15rem 0;
 }
