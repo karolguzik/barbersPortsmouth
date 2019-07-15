@@ -1,29 +1,39 @@
 .menu {
   @include abs;
+  display: none;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
-  background-color: $color-black-light;
+  background-color: $color-black;
   transition: .5s;
   opacity: 0;
-  display: none;
-
-  flex-direction: column;
+  z-index: 100;
 
   &-top {
     width: 100%;
+    padding: 2rem 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 4rem;
   }
 
   &-logo {
+    color: $color-brown;
+    font-size: 3rem;
 
     &--sub {
       display: block;
+      font-size: $default-font-size;
+      color: $color-gray-1;
+      text-align: right;
     }
   }
 
+  &-hamburger {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: $color-gray-1;
+  }
 
   &-nav {
     margin-top: 1rem;
@@ -31,21 +41,36 @@
 
     &__item {
       margin-top: 2rem;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    &__link {
+      display: block;
+      margin-top: 1rem;
+      padding: 0 .5rem;
+      font-size: 5rem;
+      background-color: $color-gray-1;
+      color: $color-black-light;
     }
   }
 
   &-nr {
-    display: block;
+    // display: inline-block;
+    font-size: 3rem;
+    color: $color-brown;
   }
 
   &-social-media {
     margin-bottom: 2rem;
     margin-top: auto;
     align-self: center;
+    font-size: 1.8rem;
   }
 
   &-fb,
   &-msg {
     padding: 1rem;
+    color: $color-brown;
   }
 }

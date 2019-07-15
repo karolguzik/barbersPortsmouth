@@ -2,29 +2,35 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 10rem;
-
-  // display: flex;
-  &__desc {
-    width: 50%;
-    margin: 0 auto;
-  }
 }
 
 .workshop {
   max-width: 1280px;
   margin: 0 auto;
   padding: 10rem;
+  color: $color-primary;
+  font-size: 4.5rem;
+  text-align: center;
+  letter-spacing: .3rem;
 }
 
-.price {
+.offer {
+  // background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../../img/hair9.jpg);
+  // background-attachment: fixed;
+  // background-position: center 0%;
+  // background-size: cover;
+  // position: sticky;
+  width: 100%;
   padding: 10rem;
   background-color: $color-black-light;
-}
+  color: $color-gray-2;
 
-.list {
-  display: flex;
-  width: 50%;
-  margin: 0 auto;
+  &__list {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    font-size: $default-font-size;
+  }
 
   &__name {
     border-right: 1px solid white;
@@ -44,6 +50,7 @@
   }
 }
 
+
 .contact {
   max-width: 1280px;
   margin: 0 auto;
@@ -62,12 +69,16 @@
 
   &__item {
     padding: 1rem 0;
+    font-size: $default-font-size;
+    color: $color-primary;
   }
 }
 
 
 .open {
   display: flex;
+  font-size: $default-font-size;
+  color: $color-primary;
 
   &>* {
     padding: 2rem;
@@ -75,6 +86,7 @@
   }
 
   &__title {
+    font-size: 2.8rem;
     border-right: 1px solid $color-black-light;
   }
 

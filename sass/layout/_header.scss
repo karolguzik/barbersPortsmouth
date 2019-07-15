@@ -1,13 +1,71 @@
 .header {
+  position: relative;
   height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(20, 20, 20, 0.829), rgba(15, 15, 15, 0.829)), url(../../img/header.jpg);
+  background-image: linear-gradient(rgba(3, 3, 3, .6), rgba(10, 10, 10, .6)), url(../../img/headerblack&white3.jpg);
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center 40%;
 
-  &-hamburger {
+  &-top {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    padding: .5rem 0;
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0 0 10px 1px $color-black;
+  }
+
+  &__heading {
     position: absolute;
-    top: 4rem;
-    right: 4rem;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: right;
+  }
+}
+
+.hamburger {
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: $color-gray-1;
+  cursor: pointer;
+}
+
+.logo-box {}
+
+.logo {
+
+  &__img {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+
+.welcome {
+  display: inline-block;
+  margin-right: 3rem;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  transform: rotate(5deg);
+  color: $color-black;
+  background-color: $color-gray-1;
+  background-color: rgb(165, 122, 77);
+}
+
+.scroll {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: $color-brown;
+
+  &-arrow {
+    display: block;
+    font-size: 5rem;
+    text-align: center;
   }
 }

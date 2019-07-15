@@ -11,18 +11,18 @@
 
 <body>
 
-  <div class="menu menu-js">
+  <div class="menu">
     <div class="menu-top">
       <div class="menu-logo">Portsmouth <span class="menu-logo--sub">Barbers</span></div>
-      <div class="hamburger menu-hamburger">CLOSE</div>
+      <div class="menu-hamburger">CLOSE</div>
     </div>
 
     <nav class="menu-nav">
       <ul class="menu-nav__list">
-        <li class="menu-nav__item"><a href="#" class="menu-nav__link"><span class="menu-nr">01</span>we are</a></li>
-        <li class="menu-nav__item"><a href="#" class="menu-nav__link"><span class="menu-nr">02</span>workshop</a></li>
-        <li class="menu-nav__item"><a href="#" class="menu-nav__link"><span class="menu-nr">03</span>price</a></li>
-        <li class="menu-nav__item"><a href="#" class="menu-nav__link"><span class="menu-nr">04</span>contact</a></li>
+        <li class="menu-nav__item"><span class="menu-nr">01</span><a href="#" class="menu-nav__link">we are</a></li>
+        <li class="menu-nav__item"><span class="menu-nr">02</span><a href="#" class="menu-nav__link">workshop</a></li>
+        <li class="menu-nav__item"><span class="menu-nr">03</span><a href="#" class="menu-nav__link">price</a></li>
+        <li class="menu-nav__item"><span class="menu-nr">04</span><a href="#" class="menu-nav__link">contact</a></li>
       </ul>
     </nav>
 
@@ -33,26 +33,32 @@
   </div>
 
   <header class="header">
-    <div class="hamburger header-hamburger">MENU</div>
+    <div class="header-top">
+      <div class="hamburger">MENU</div>
+      <div class="logo-box">
+        <div class="logo"><img class="logo__img" src="img/logo.png" alt="logo"></div>
+      </div>
+    </div>
 
-    <div class="switch-container switch-js">
-      <div class="switch-box active"></div>
-      <div class="switch-box"></div>
-      <div class="switch-box"></div>
+    <div class="scroll">Scroll<span class="scroll-arrow">&caron;</span></div>
+
+    <div class="header__heading">
+      <h1 class="heading-primary">The best barbershop</h1>
+      <span class="welcome">welcome</span>
     </div>
   </header>
 
-  <nav class="nav nav-js">
+  <nav class="nav">
     <ul class="nav__list">
-      <li class="nav__item"><a href="#" class="nav__link">contact</a></li>
-      <li class="nav__item"><a href="#" class="nav__link">price</a></li>
-      <li class="nav__item"><a href="#" class="nav__link">workshop</a></li>
-      <li class="nav__item"><a href="#" class="nav__link">we are</a></li>
+      <li class="nav__item"><a href="#contact" class="nav__link">contact</a></li>
+      <li class="nav__item"><a href="#offer" class="nav__link">price</a></li>
+      <li class="nav__item"><a href="#workshop" class="nav__link">workshop</a></li>
+      <li class="nav__item"><a href="#about" class="nav__link">we are</a></li>
     </ul>
   </nav>
 
   <main>
-    <section class="about">
+    <section id="about" class="about">
       <div class="margin-big">
         <h2 class="heading-secondary heading-secondary--left">
           <span class="heading-secondary--main">We</span>
@@ -60,13 +66,14 @@
         </h2>
       </div>
 
-      <p class="about__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo enim facere, minus
+      <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo enim facere,
+        minus
         repudiandae perferendis minima dolor porro nihil fuga autem quis neque, ipsam nisi sunt et tempore. Dignissimos
         dolor labore sunt unde architecto quibusdam modi accusamus, nam possimus asperiores expedita maiores saepe
         corrupti vel, aspernatur quo quasi nobis impedit nesciunt!</p>
     </section>
 
-    <section class="workshop">
+    <section id="workshop" class="workshop">
       <div class="margin-bigger">
         <h2 class="heading-secondary heading-secondary--right">Workshop</h2>
       </div>
@@ -107,13 +114,13 @@
       </div>
     </section>
 
-    <section class="price">
+    <section id="offer" class="offer">
       <div class="margin-big">
         <h2 class="heading-secondary heading-secondary--right">Price list</h2>
       </div>
 
-      <div class="list">
-        <div class="list__name">
+      <div class="offer__list">
+        <div class="offer__name">
           <li>Cut & Wash</li>
           <li>Skin Fade Haircut</li>
           <li>Scissor Cut</li>
@@ -126,7 +133,7 @@
           <li>1.2.3. ALL OVER</li>
           <li>Eyebrow Threading</li>
         </div>
-        <div class="list__price">
+        <div class="offer__price">
           <li>f12</li>
           <li>f10</li>
           <li>f10</li>
@@ -142,7 +149,7 @@
       </div>
     </section>
 
-    <section class="contact">
+    <section id="contact" class="contact">
       <div class="margin-big">
         <h2 class="heading-secondary heading-secondary--left">Contact</h2>
       </div>
@@ -181,6 +188,8 @@
     </div>
   </footer>
 
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="script/main.js"></script>
 </body>
 

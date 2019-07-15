@@ -2,6 +2,14 @@ body {
   color: $color-primary;
 }
 
+.heading-primary {
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: #505050;
+  color: $color-gray-1;
+  border-bottom: 4px solid #404040;
+}
+
 .heading-secondary {
   max-width: 1280px;
   font-size: 6rem;
@@ -22,175 +30,10 @@ body {
 }
 
 
-
-
-.hamburger {
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: $color-gray-1;
-}
-
-
-
-
-.menu {
-
-
-  &-logo {
-    color: $color-brown;
-    font-size: 3rem;
-
-    &--sub {
-      font-size: 2rem;
-      color: $color-gray-1;
-      text-align: right;
-    }
-  }
-
-  &-hamburger {
-    font-size: 1.5rem;
-  }
-
-  &-nav {
-
-    &__list {
-      list-style: none;
-    }
-
-    &__item {
-      text-align: center;
-    }
-
-    &__link {
-      text-decoration: none;
-      color: white;
-      font-size: 6rem;
-    }
-  }
-
-  &-nr {
-    font-size: 3rem;
-    color: $color-brown;
-  }
-
-  &-social-media {
-    font-size: 1.8rem;
-  }
-
-  &-fb,
-  &-msg {
-    color: $color-brown;
-    text-decoration: none;
-  }
-}
-
-
-
-.header {}
-
-
-
-
-
-.nav {
-
-  &__list {
-    list-style: none;
-  }
-
-  &__item {
-    text-align: center;
-  }
-
-  &__link {
-    color: $color-gray-1;
-    font-size: 2rem;
-    text-decoration: none;
-    letter-spacing: .3rem;
-  }
-}
-
-
-
-
-
-.about__desc {
+.paragraph {
+  width: 50%;
+  margin: 0 auto;
   font-size: $default-font-size;
-  font-size: 2rem;
   line-height: 1.6;
   color: $color-primary;
-}
-
-
-.workshop-gallery {
-  color: $color-primary;
-  font-size: 4.5rem;
-  text-align: center;
-  align-content: center;
-  letter-spacing: .3rem;
-}
-
-
-.price {
-  color: $color-gray-2;
-}
-
-
-.list {
-  // font-size: $default-font-size;
-  font-size: 2rem;
-  list-style: none;
-}
-
-.address {
-
-  &__list {
-    list-style: none;
-  }
-
-  &__item {
-    font-size: $default-font-size;
-    color: $color-primary;
-  }
-}
-
-.open {
-  font-size: $default-font-size;
-  color: $color-primary;
-
-  &__title {
-    font-size: 2.8rem;
-  }
-
-  &__day {}
-
-  &__time {}
-}
-
-
-.footer__title {
-
-  &--big {
-    font-size: 3rem;
-    color: $color-brown;
-    letter-spacing: .2rem;
-  }
-
-  &--small {
-    font-size: 2.5rem;
-    color: $color-gray-1;
-    letter-spacing: .1rem;
-  }
-}
-
-
-.social-media {
-  font-size: $default-font-size;
-  font-size: $font-size-smaller;
-}
-
-.fb,
-.msg {
-  text-decoration: none;
-  color: $color-gray-1;
 }

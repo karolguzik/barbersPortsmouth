@@ -3,6 +3,7 @@
   grid-template-columns: repeat(22, 100px);
   grid-template-rows: repeat(6, 100px);
   grid-gap: 5rem;
+  align-content: center;
   margin-left: 20rem;
 }
 
@@ -18,6 +19,7 @@ img {
 .gallery-1 {
   grid-column: 1/4;
   grid-row: 1/4;
+  box-shadow: 5px -5px 10px 1px $color-black;
 }
 
 .gallery-2 {

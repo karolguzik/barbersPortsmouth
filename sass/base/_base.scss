@@ -6,12 +6,28 @@
   box-sizing: inherit;
 }
 
+button {
+  border: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+
+ul,
+li {
+  list-style: none;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
+  width: 100vw;
+  // height: 300vh;
   box-sizing: border-box;
-  height: 300vh;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
