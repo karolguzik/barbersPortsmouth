@@ -1,15 +1,19 @@
 const menu = document.querySelector('.menu');
+const menuHamburger = document.querySelector('.btn-hamburger');
+const menuHamburgerActive = document.querySelector('.btn-hamburger .active');
 
 function showMenu() {
-  setTimeout(function () {
-    menu.style.opacity = '1';
-  }, 200);
+  // setTimeout(function () {
+  //   menu.style.opacity = '1';
+  // }, 200);
 
-  setTimeout(function () {
-    menu.style.display = 'flex';
-    menu.style.position = 'fixed';
-    menu.style.overflow = 'hidden';
-  }, 100);
+  // setTimeout(function () {
+  //   menu.style.display = 'flex';
+  //   menu.style.position = 'fixed';
+  //   menu.style.overflow = 'hidden';
+  // }, 100);
+
+  menu.classList.add('menuActive');
 }
 
 
@@ -63,5 +67,15 @@ $('.nav a').on('click', function (e) {
 });
 
 
-document.querySelector('.hamburger').addEventListener('click', showMenu);
-document.querySelector('.menu-hamburger').addEventListener('click', hideMenu);
+
+document.querySelector('.btn-hamburger').addEventListener('click', function (e) {
+  e.preventDefault();
+  console.log('test');
+  this.classList.toggle('active');
+})
+
+// document.querySelector('.hamburger').addEventListener('click', showMenu);
+// document.querySelector('.menu-hamburger').addEventListener('click', hideMenu);
+
+menuHamburger.addEventListener('click', showMenu);
+// menuHamburgerActive.addEventListener('click', hideMenu);
