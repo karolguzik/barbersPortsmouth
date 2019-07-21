@@ -5,14 +5,14 @@ body {
 .heading-primary {
   font-size: 6rem;
   text-transform: uppercase;
-  color: #505050;
-  color: $color-gray-1;
+  color: #5c5c5c;
+  // color: $color-gray-1;
   border-bottom: 4px solid #404040;
 }
 
 .heading-secondary {
   max-width: 1280px;
-  font-size: 6rem;
+  font-size: 7rem;
   text-transform: uppercase;
 
   &>* {
@@ -27,6 +27,13 @@ body {
     padding-right: 10rem;
     text-align: right;
   }
+}
+
+.heading-tertiary {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: $color-gray-2;
+  letter-spacing: .1rem;
 }
 
 

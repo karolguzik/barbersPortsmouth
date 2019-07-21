@@ -13,28 +13,49 @@
 
   <div class="menu">
     <div class="menu-top">
-      <div class="menu-logo">Portsmouth <span class="menu-logo--sub">Barbers</span></div>
-      <div class="menu-hamburger">CLOSE</div>
+      <button class="btn-hamburger menu-hamburger">
+        <span class="menu-hamburger--1"></span>
+        <span class="menu-hamburger--2"></span>
+      </button>
     </div>
+
+    <div class="menu-logo">Portsmouth <span class="menu-logo--sub">Barbers</span></div>
 
     <nav class="menu-nav">
       <ul class="menu-nav__list">
-        <li class="menu-nav__item"><span class="menu-nr">01</span><a href="#" class="menu-nav__link">we are</a></li>
-        <li class="menu-nav__item"><span class="menu-nr">02</span><a href="#" class="menu-nav__link">workshop</a></li>
-        <li class="menu-nav__item"><span class="menu-nr">03</span><a href="#" class="menu-nav__link">price</a></li>
-        <li class="menu-nav__item"><span class="menu-nr">04</span><a href="#" class="menu-nav__link">contact</a></li>
+        <span class="menu-nr">01</span>
+        <li class="menu-nav__item"><a href="#" class="menu-nav__link">we are</a></li>
+        <span class="menu-nr">02</span>
+        <li class="menu-nav__item"><a href="#" class="menu-nav__link">workshop</a></li>
+        <span class="menu-nr">03</span>
+        <li class="menu-nav__item"><a href="#" class="menu-nav__link">price</a></li>
+        <span class="menu-nr">04</span>
+        <li class="menu-nav__item"><a href="#" class="menu-nav__link">contact</a></li>
       </ul>
     </nav>
 
+
     <div class="menu-social-media">
-      <a href="#" class="menu-fb">facebook</a>
-      <a href="#" class="menu-msg">messenger</a>
+      <a href="#" class="fb">
+        <svg class="fb__icon">
+          <use xlink:href="img/sprite.svg#icon-facebook"></use>
+        </svg>
+      </a>
+      <a href="#" class="msg">
+        <svg class="msg__icon">
+          <use xlink:href="img/sprite.svg#icon-bubble"></use>
+        </svg>
+      </a>
     </div>
   </div>
 
   <header class="header">
     <div class="header-top">
-      <div class="hamburger">MENU</div>
+      <button class="btn-hamburger header-hamburger">
+        <span class="header-hamburger--1"></span>
+        <span class="header-hamburger--2"></span>
+        <span class="header-hamburger--3"></span>
+      </button>
       <div class="logo-box">
         <div class="logo"><img class="logo__img" src="img/logo.png" alt="logo"></div>
       </div>
@@ -119,6 +140,11 @@
         <h2 class="heading-secondary heading-secondary--right">Price list</h2>
       </div>
 
+      <div class="side-text">
+        <p class="side-text--main">Our services</p>
+        <p class="side-text--sub">Keeping your perfect look</p>
+      </div>
+
       <div class="offer__list">
         <div class="offer__name">
           <li>Cut & Wash</li>
@@ -134,17 +160,17 @@
           <li>Eyebrow Threading</li>
         </div>
         <div class="offer__price">
-          <li>f12</li>
-          <li>f10</li>
-          <li>f10</li>
-          <li>f9</li>
-          <li>f8</li>
-          <li>f8</li>
-          <li>f10</li>
-          <li>f6</li>
-          <li>f8</li>
-          <li>f8</li>
-          <li>f5</li>
+          <li>12</li>
+          <li>10</li>
+          <li>10</li>
+          <li>9</li>
+          <li>8</li>
+          <li>8</li>
+          <li>10</li>
+          <li>6</li>
+          <li>8</li>
+          <li>8</li>
+          <li>5</li>
         </div>
       </div>
     </section>
@@ -155,44 +181,59 @@
       </div>
 
       <div class="contact-content">
-        <div class="open">
-          <div class="open__title">Opening hours:</div>
-          <div class="open__day">Mon - Sat.</div>
-          <div class="open__time">9:30 - 18:00</div>
+        <div class="details">
+          <div class="address">
+            <h3 class="heading-tertiary address__title">Address</h3>
+            <p class="address__details">61 Fawcett Road, P040 Portsmouth</p>
+          </div>
+          <div class="phone">
+            <h3 class="heading-tertiary phone__title">Phone</h3>
+            <p class="phone__number">07856 139886</p>
+          </div>
+          <div class="open">
+            <h3 class="heading-tertiary open__title">Opening hours</h3>
+            <p class="open__details">Mon - Sat. 9:30 - 18:00</p>
+          </div>
         </div>
 
-        <div class="address">
-          <ul class="address__list">
-            <li class="address__item">61 Fawcett Road</li>
-            <li class="address__item">PO40 Portsmouth</li>
-            <li class="address__item">07856 139886</li>
-          </ul>
+        <div class="google-map">
+          <img class="google-map__img" src="img/googlemapblack.jpg" alt="Google Map" class="google-map-img">
         </div>
+
+        <!-- <div class="contact__social-media">
+          <a href="#" class="fb">
+                <svg class="fb__icon">
+                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+          <a href="#" class="msg">
+                <svg class="msg__icon">
+                  <use xlink:href="img/sprite.svg#icon-bubble"></use>
+                </svg>
+              </a>
+        </div> -->
       </div>
 
-      <div class="google-map">
-        <img src="img/googlemap.png" alt="Google Map" class="google-map-img">
-      </div>
+
     </section>
   </main>
 
   <footer class="footer">
-    <h2 class="footer__title">
-      <span class="footer__title--big">Portsmouth</span>
-      <span class="footer__title--small">Barbers</span>
-    </h2>
+    <div class="footer__logo">Portsmouth <span class="footer__logo--sub">Barbers</span></div>
 
-    <div class="social-media">
-      <a href="#" class="fb">facebook</a>
-      <a href="#" class="msg">messenger</a>
+    <div class="footer__social-media">
+      <a href="#" class="fb">
+          <svg class="fb__icon">
+            <use xlink:href="img/sprite.svg#icon-facebook"></use>
+          </svg>
+        </a>
+      <a href="#" class="msg">
+          <svg class="msg__icon">
+            <use xlink:href="img/sprite.svg#icon-bubble"></use>
+          </svg>
+        </a>
     </div>
   </footer>
-
-  <button class="btn-hamburger">
-    <span class="btn-hamburger--1"></span>
-    <span class="btn-hamburger--2"></span>
-    <span class="btn-hamburger--3"></span>
-  </button>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

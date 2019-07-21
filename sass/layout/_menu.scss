@@ -4,73 +4,98 @@
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  background-color: $color-black;
+  // background-color: $color-black;
+  background: linear-gradient(173deg, rgba(0, 0, 0, 1) 10%, rgba(36, 36, 37, 1) 100%);
   transition: .5s;
-  opacity: 0;
+  opacity: 1;
   z-index: 100;
 
   &-top {
-    width: 100%;
-    padding: 2rem 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 2rem 3rem;
   }
 
   &-logo {
-    color: $color-brown;
+    position: absolute;
+    bottom: 50%;
+    left: 2.5rem;
+    transform: rotate(180deg) translateY(-50%);
+    writing-mode: vertical-rl;
+    letter-spacing: .3rem;
     font-size: 3rem;
+    color: $color-brown;
+
 
     &--sub {
-      display: block;
       font-size: $default-font-size;
       color: $color-gray-1;
       text-align: right;
     }
   }
 
-  &-hamburger {
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: $color-gray-1;
-  }
 
   &-nav {
     margin-top: 1rem;
     align-self: center;
 
-    &__item {
-      margin-top: 2rem;
-      padding: 0 1rem;
+    &__list {
       text-align: center;
     }
 
+    &__item {
+      padding: 0 1rem;
+    }
+
     &__link {
+      position: relative;
       display: block;
-      margin-top: 1rem;
+      margin-bottom: 1rem;
       padding: 0 .5rem;
-      font-size: 5rem;
-      background-color: $color-gray-1;
-      color: $color-black-light;
+      font-size: 5.5rem;
+      color: $color-primary;
+      overflow: hidden;
+      transition: .3s ease-in-out;
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: .3rem;
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        transform: translateY(-50%);
+        opacity: .5;
+        background-color: $color-primary;
+        transition: .3s ease-in-out;
+      }
+
+      &:nth-child(odd)::before {
+        transform: rotate(3deg);
+      }
+
+      &:hover {
+        color: $color-gray-1;
+      }
+
+      &:hover::before {
+        opacity: 0;
+      }
     }
   }
 
   &-nr {
-    // display: inline-block;
-    font-size: 3rem;
-    color: $color-brown;
+    display: inline-block;
+    margin: 1rem 0;
+    padding: .5rem 1rem;
+    font-size: 3.5rem;
+    background-color: $color-gray-1;
+    color: $color-black-light;
   }
 
   &-social-media {
-    margin-bottom: 2rem;
-    margin-top: auto;
-    align-self: center;
-    font-size: 1.8rem;
-  }
-
-  &-fb,
-  &-msg {
-    padding: 1rem;
-    color: $color-brown;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding-right: 2rem;
   }
 }

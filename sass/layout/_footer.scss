@@ -1,47 +1,34 @@
 .footer {
+  position: relative;
   width: 100%;
-  padding: 4rem 20rem;
+  padding: 2rem 20rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   background-color: $color-black-light;
 
-  &__title {
+  &__logo {
+    position: absolute;
+    bottom: 50%;
+    right: 4rem;
+    transform: translateY(-50%);
+    color: $color-brown;
+    font-size: 3rem;
+    letter-spacing: .3rem;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
 
-    &--big {
-      font-size: 3rem;
-      color: $color-brown;
-      letter-spacing: .2rem;
-    }
-
-    &--small {
+    &--sub {
       margin-left: 1rem;
       font-size: 2.5rem;
       color: $color-gray-1;
-      letter-spacing: .1rem;
     }
   }
-}
 
-.social-media {
-  align-self: center;
-  font-size: $font-size-smaller;
-}
+  &__social-media {
 
-.fb {
-  padding-right: 1rem;
-  border-right: 1px solid $color-gray-1;
-  color: $color-gray-1;
-
-  &:hover {
-    color: $color-gray-2;
-  }
-}
-
-.msg {
-  padding-left: 1rem;
-  color: $color-gray-1;
-
-  &:hover {
-    color: $color-gray-2;
+    &>* {
+      display: inline-block;
+      margin: 0 .5rem;
+    }
   }
 }

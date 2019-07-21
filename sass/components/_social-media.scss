@@ -1,0 +1,22 @@
+.fb,
+.msg {
+  display: block;
+  // padding: .5rem;
+  margin-top: 1rem;
+  border-radius: 50%;
+  // background-color: $color-gray-1;
+
+  &:hover .fb__icon,
+  &:hover .msg__icon {
+    // fill: darken($color-gray-1, 20%);
+    fill: $color-primary;
+  }
+}
+
+.fb__icon,
+.msg__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: $color-gray-1;
+  transition: .2s ease-in-out;
+}
