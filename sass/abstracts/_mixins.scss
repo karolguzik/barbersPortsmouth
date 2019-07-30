@@ -11,6 +11,13 @@
   left: 0;
 }
 
+@mixin flexCenter($direction:'row') {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-self: center;
+}
+
 @mixin transition {
   transition: all .25s ease-in-out;
 }

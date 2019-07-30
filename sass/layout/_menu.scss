@@ -1,5 +1,5 @@
 .menu {
-  position: fixed;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -7,13 +7,14 @@
   height: 100vh;
   background: linear-gradient(173deg, rgba(0, 0, 0, 1) 10%, rgba(36, 36, 37, 1) 100%);
   z-index: 2;
-  opacity: .95;
+  opacity: .9;
   visibility: hidden;
   @include transition;
 
 
   &.show {
     visibility: visible;
+    position: fixed;
   }
 
   &-logo {
@@ -71,7 +72,7 @@
       font-size: 5.5rem;
       color: $color-primary;
       overflow: hidden;
-      // transition: .2s;
+      @include transition;
 
       &::before {
         content: '';
@@ -83,7 +84,7 @@
         transform: translateY(-50%);
         opacity: .5;
         background-color: $color-primary;
-        // transition: .3s ease-in-out;
+        @include transition;
       }
 
       &:nth-child(odd)::before {
@@ -110,17 +111,24 @@
   }
 
   &-social-media {
+    @include flexCenter(column);
     position: absolute;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
     padding-right: 2rem;
     opacity: 0;
-
     @include transition;
 
     &.show {
       opacity: 1;
     }
+  }
+
+  .follow {
+    margin-bottom: 2rem;
+    font-size: $default-font-size;
+    color: $color-brown;
+    writing-mode: vertical-rl;
   }
 }

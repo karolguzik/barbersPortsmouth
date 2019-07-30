@@ -35,7 +35,15 @@
   }
 
   &.close {
+
+    &:hover {
+      .btn-line {
+        background-color: $color-primary;
+      }
+    }
+
     .btn-line {
+      background-color: $color-gray-1;
 
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 3px);

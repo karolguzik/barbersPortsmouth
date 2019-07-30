@@ -18,5 +18,5 @@
   width: 2.5rem;
   height: 2.5rem;
   fill: $color-gray-1;
-  // transition: .2s ease-in-out;
+  @include transition;
 }

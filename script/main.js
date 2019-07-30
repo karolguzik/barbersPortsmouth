@@ -1,107 +1,95 @@
 const menu = document.querySelector('.menu');
 const menuBtn = document.querySelector('.menu-btn');
+const menuBtnLine = document.querySelectorAll('.btn-line');
 const menuNav = document.querySelector('.menu-nav');
+const menuNavLinks = document.querySelectorAll('.menu-nav__link');
 const menuLogo = document.querySelector('.menu-logo');
 const menuSocials = document.querySelector('.menu-social-media');
 const headerHeading = document.querySelector('.header__heading');
 const logo = document.querySelector('.logo');
 const scroll = document.querySelector('.scroll');
 const nav = document.querySelector('.nav');
-
-let flag = false;
-
-menuBtn.addEventListener('click', function () {
-  if (!flag) {
-    this.classList.toggle('close');
-    menu.classList.toggle('show');
-    menuNav.classList.toggle('show');
-    menuLogo.classList.toggle('show');
-    menuSocials.classList.toggle('show');
-    headerHeading.classList.toggle('show');
-    logo.classList.toggle('show');
-    scroll.classList.toggle('show');
-    nav.classList.toggle('show');
-
-    // flag = true;
-  }
-});
-// menuHamburger.classList.addEventListener
-
-// function showMenu() {
-//   setTimeout(function () {
-//     menu.style.opacity = '1';
-//   }, 200);
-
-//   setTimeout(function () {
-//     menu.style.display = 'flex';
-//     menu.style.position = 'fixed';
-//     menu.style.overflow = 'hidden';
-//   }, 100);
-
-//   // menu.classList.add('menuActive');
-// }
+const navLink = document.querySelectorAll('.nav__link');
+const navItem = document.querySelectorAll('.nav__item');
+const constTab = [menu, menuNav, menuLogo, menuSocials, headerHeading, logo, scroll, nav];
 
 
-// function hideMenu() {
-//   setTimeout(function () {
-//     menu.style.opacity = '0';
-//     menu.style.position = 'absolute';
-//   }, 100);
 
-//   setTimeout(function () {
-//     menu.style.display = 'none';
-//   }, 300);
-// }
+const fromTopAbout = document.querySelector('.about').offsetTop;
+const fromTopWorkshop = document.querySelector('.workshop').offsetTop;
+const fromTopOffer = document.querySelector('.offer').offsetTop;
+const fromTopContact = document.querySelector('.contact').offsetTop;
 
-
-$('.nav a').on('click', function (e) {
-  if (this.hash !== '') {
-    e.preventDefault();
-    const hash = this.hash;
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 800);
-    $('.nav').css('position', 'fixed');
-    $('.hamburger').css('position', 'fixed');
+navLink.forEach(el => el.addEventListener('click', function () {
+  if (el.textContent === 'we are') {
+    window.scrollTo({
+      top: fromTopAbout,
+      behavior: 'smooth',
+    });
+    nav.style.position = 'fixed';
+  } else if (el.textContent === 'workshop') {
+    window.scrollTo({
+      top: fromTopWorkshop,
+      behavior: 'smooth',
+    });
+    nav.style.position = 'fixed';
   }
 
-  if (this.hash === '#about') {
-    $('.nav__item:nth-child(4)').css({
-      background: '#c7c5c5dc'
-    });
-    $('.nav__item:nth-child(4) a').css('color', 'black');
 
-    $('.nav__item:nth-child(3)').css({
-      background: 'none',
-    });
-    $('.nav__item:nth-child(3) a').css('color', 'black');
-    $('.nav__item:nth-child(2) a').css('color', 'black');
-    $('.nav__item:nth-child(1) a').css('color', 'black');
-    $('.nav__item:nth-child(1) a:hover').css('color', 'black');
-  } else if (this.hash === '#workshop') {
-    $('.nav__item:nth-child(3)').css({
-      background: '#c7c5c5dc'
-    });
-    $('.nav__item:nth-child(3) a').css('color', 'black');
+}));
 
-    $('.nav__item:nth-child(4)').css({
-      background: '#ffffffe1'
-    });
-    $('.nav__item:nth-child(4) a').css('color', '#c7c5c5dc');
+
+function show(e) {
+  e.preventDefault();
+  menuBtn.classList.toggle('close');
+  constTab.forEach(el => el.classList.toggle('show'));
+}
+
+
+
+function sticky() {
+  const heightScroll = window.scrollY;
+
+  if (heightScroll < fromTopAbout) {
+    menuBtn.style.position = 'absolute';
+    nav.style.position = 'absolute';
+    menuBtnLine.forEach(el => el.style.backgroundColor = '#c7c5c5dc');
+    navLink.forEach(el => el.style.color = '#c7c5c5dc');
+    navLink.forEach(el => el.style.color = '#c7c5c5dc');
+    navItem.forEach(el => el.style.background = 'none');
+  } else if (heightScroll > fromTopAbout && heightScroll < fromTopWorkshop) {
+    menuBtn.style.position = 'fixed';
+    nav.style.position = 'fixed';
+    menuBtnLine.forEach(el => el.style.backgroundColor = 'black');
+    navLink.forEach(el => el.style.color = 'black');
+    navItem[3].style.backgroundColor = '#c7c5c5dc';
+    navItem[2].style.background = 'none';
+  } else if (heightScroll > fromTopWorkshop && heightScroll < fromTopOffer) {
+    menuBtnLine.forEach(el => el.style.backgroundColor = '#c7c5c5dc');
+    navLink.forEach(el => el.style.color = '#c7c5c5dc');
+    navItem[3].style.background = 'none';
+    navItem[2].style.backgroundColor = '#c7c5c5dc';
+    navLink[2].style.color = 'black';
+    navItem[1].style.background = 'none';
+  } else if (heightScroll > fromTopOffer && heightScroll < fromTopContact) {
+    menuBtnLine.forEach(el => el.style.backgroundColor = 'black');
+    navLink.forEach(el => el.style.color = 'black');
+    navItem[2].style.background = 'none';
+    navItem[1].style.backgroundColor = '#c7c5c5dc';
+    navItem[0].style.background = 'none';
+  } else if (heightScroll > fromTopContact) {
+    menuBtnLine.forEach(el => el.style.backgroundColor = '#c7c5c5dc');
+    navLink.forEach(el => el.style.color = '#c7c5c5dc');
+    navItem[1].style.background = 'none';
+    navItem[1].style.color = 'black';
+    navItem[0].style.backgroundColor = '#c7c5c5dc';
+    navLink[0].style.color = 'black';
+  } else {
+    menuBtn.style.position = 'absolute';
+    nav.style.position = 'absolute';
   }
-});
+}
 
-
-
-// document.querySelector('.btn-hamburger').addEventListener('click', function (e) {
-//   e.preventDefault();
-//   console.log('test');
-//   this.classList.toggle('active');
-// })
-
-// document.querySelector('.hamburger').addEventListener('click', showMenu);
-// document.querySelector('.menu-hamburger').addEventListener('click', hideMenu);
-
-// headerHamburger.addEventListener('click', showMenu);
-// menuHamburger.addEventListener('click', hideMenu);
-// menuHamburgerActive.addEventListener('click', hideMenu);
+window.addEventListener('scroll', sticky);
+menuBtn.addEventListener('click', show);
+menuNavLinks.forEach(el => el.addEventListener('click', show));

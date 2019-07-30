@@ -25,10 +25,16 @@
   }
 
   &__social-media {
+    @include flexCenter;
 
     &>* {
       display: inline-block;
       margin: 0 .5rem;
+    }
+
+    .follow {
+      font-size: $default-font-size;
+      color: $color-brown;
     }
   }
 }
