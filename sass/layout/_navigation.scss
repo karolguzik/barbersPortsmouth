@@ -5,6 +5,12 @@
   writing-mode: vertical-rl;
   transform: rotate(180deg) translateY(50%);
 
+  @include transitionSlower;
+
+  &.show {
+    opacity: 0;
+  }
+
   &__list {
     display: flex;
   }

@@ -1,83 +1,53 @@
-.btn-hamburger {
-  display: block;
+.menu-btn {
+  position: absolute;
+  z-index: 3;
   width: 25px;
   height: 25px;
-  // border-radius: 50%;
   background: none;
   border: none;
   outline: none;
   overflow: hidden;
-  transition: all .25s ease-in-out;
   cursor: pointer;
-  // background-color: $color-gray-1;
-  // padding: .5rem;
+  @include transition;
+
 
   &>span {
     display: block;
     width: 100%;
     height: .15rem;
+    margin: 0 0 .4rem 0;
     background-color: $color-gray-1;
-    transition: all .35s ease;
+    @include transition;
   }
-
-  &:hover span {
-    background-color: $color-primary;
-  }
-}
-
-.header-hamburger {
-
-  &--1,
-  &--2,
-  &--3 {
-    margin: .5rem auto;
-  }
-
 
   &:hover {
+    .btn-line {
+      background-color: $color-primary;
 
-    .header-hamburger--1 {
-      transform: translateX(-50%);
+      &:nth-child(1) {
+        transform: translateX(-50%);
+      }
+
+      &:nth-child(3) {
+        transform: translate(50%);
+      }
     }
+  }
 
-    .header-hamburger--3 {
-      transform: translate(50%);
+  &.close {
+    .btn-line {
+
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 3px);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -3px);
+      }
     }
-  }
-
-  // &.active {
-  //   position: relative;
-  //   z-index: 1000;
-
-  //   &>span:nth-child(1) {
-  //     width: 70%;
-  //     transform: translateY(8px) rotateZ(45deg);
-  //   }
-
-  //   &>span:nth-child(3) {
-  //     width: 70%;
-  //     transform: translateY(-8px) rotateZ(-45deg);
-  //   }
-
-  //   &>span:nth-child(2) {
-  //     opacity: 0;
-  //   }
-  // }
-}
-
-.menu-hamburger {
-  position: relative;
-
-  &--1,
-  &--2 {
-    position: absolute;
-  }
-
-  &--1 {
-    transform: rotate(45deg);
-  }
-
-  &--2 {
-    transform: rotate(-45deg);
   }
 }
