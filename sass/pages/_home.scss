@@ -8,18 +8,35 @@
   padding: 10rem;
   height: 100vh;
 
-  @media only screen and (width: 411px) and (height: 731px) {
-    height: 50vh;
-  }
 
-  @include mqSet(320px, 568px) {
-    padding: 5rem;
-  }
 
-  @include mqSet(411px, 731px) {
+  @media only screen and (min-width: 1024px) and (min-height: 768px) {
     height: auto;
   }
 
+  @media only screen and (min-width: 812px) and (min-height: 375px) {
+    height: auto;
+  }
+
+  @media only screen and (min-width: 768px) and (min-height: 1024px) {
+    height: auto;
+  }
+
+  @media only screen and (max-width: 732px) and (orientation: landscape) {
+    height: auto;
+  }
+
+  @include mqBoth(1100px, 731px) {
+    height: 100vh;
+  }
+
+
+
+
+  // @media only screen and (max-width: 640px) and (orientation: landscape) {
+  //   height: auto;
+  //   padding: 10rem;
+  // }
 }
 
 .workshop {
@@ -27,7 +44,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 10rem;
-  color: $color-gray-2;
+  color: $color-gray-1;
   font-size: 4.5rem;
   text-align: center;
   letter-spacing: .3rem;
@@ -35,6 +52,9 @@
 
   .side-text {
     height: 80%;
+    // display: flex;
+    // justify-content: center;
+    // align-self: center;
 
     &--main {
       display: flex;
@@ -53,12 +73,65 @@
   width: 100%;
   padding: 10rem;
 
+  @include mq320 {
+    .heading-secondary {
+
+      &--right {
+        padding: 0;
+      }
+    }
+  }
+
+  @include mq400 {
+    .heading-secondary {
+
+      &--right {
+        padding: 0;
+      }
+    }
+  }
+
 
   &__list {
     display: flex;
     width: 50%;
     margin: 0 auto;
     font-size: $default-font-size;
+
+    @include mq360 {
+      width: 70%;
+    }
+
+    @include mq500 {
+      width: 70%;
+    }
+
+    @include mq400 {
+      width: 80%;
+    }
+
+    @include mqBoth(411px, 731px) {
+      font-size: 2.4rem;
+      width: 80%;
+    }
+
+    @include mq320 {
+      width: 90%;
+    }
+
+    @media only screen and (min-width: 768px) and (min-height: 1024px) {
+      font-size: 3rem;
+      width: 50%;
+    }
+
+    @media only screen and (min-width: 1024px) and (min-height: 768px) {
+      font-size: 2.5rem;
+      width: 50%;
+    }
+
+    @include mqBoth(1100px, 731px) {
+      width: 50%;
+    }
   }
 
   &__name {
@@ -71,6 +144,7 @@
   }
 
   &__price {
+    font-weight: bold;
     padding-left: 3rem;
 
     &>li {
@@ -82,6 +156,7 @@
 
 
 .contact {
+  position: relative;
   width: 100%;
   margin: 0 auto;
   padding: 10rem 5rem;
@@ -92,6 +167,25 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+
+    @include mq1600 {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media only screen and (min-width: 1024px) and (min-height: 768px) {
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+    }
+
+    @include mq900 {
+      flex-direction: column;
+      align-content: center;
+    }
+
+
   }
 
 
@@ -103,9 +197,23 @@
   font-size: 1.8rem;
   font-weight: lighter;
 
+
   &>* {
     margin-bottom: 3.2rem;
   }
+
+
+
+
+  @media only screen and (min-width: 768px) and (min-height: 1024px) {
+    font-size: 3rem;
+  }
+
+  @include mqBoth(411px, 731px) {
+    font-size: 2.2rem;
+  }
+
+
 }
 
 .address {
@@ -136,6 +244,45 @@
   align-self: stretch;
   box-shadow: -3px 3px 20px 0 $color-black;
 
+
+
+
+  @include mq900 {
+    margin-top: 5rem;
+    width: 50%;
+    align-self: center;
+  }
+
+  @include mq700 {
+    width: 60%;
+  }
+
+  @include mq500 {
+    width: 70%;
+  }
+
+  @include mqBoth(411px, 731px) {
+    width: 70%;
+  }
+
+  @include mqBoth(1100px, 731px) {
+    width: 50%;
+  }
+
+  @include mq360 {
+    width: 80%;
+  }
+
+
+  @media only screen and (min-width: 1024px) and (min-height: 768px) {
+    margin-top: 3rem;
+    width: 60%;
+  }
+
+  @include mqBoth(1100px, 731px) {
+    width: 40%;
+  }
+
   &__img {
     width: 100%;
     height: 100%;
@@ -156,27 +303,18 @@
   text-align: center;
   height: 100%;
 
-  @include mqSet(320px, 568px) {
-    height: 80%;
+  @media only screen and (min-width: 768px) and (min-height: 1024px) {
+    font-size: 4rem;
   }
-
 
   &--main {
     font-size: 3.5rem;
     color: $color-primary;
     display: inline;
-
-    @include mqSet(320px, 568px) {
-      display: inline;
-    }
   }
 
   &--sub {
     display: inline;
-
-    @include mqSet(320px, 568px) {
-      display: inline;
-    }
   }
 }
 

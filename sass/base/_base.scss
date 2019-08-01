@@ -24,20 +24,24 @@ li {
 html {
   font-size: 62.5%;
 
-  @include mqXl {
+  @include mq1600 {
     font-size: 55%;
   }
 
-  @include mqLg {
-    font-size: 50%;
+  @include mq1300 {
+    font-size: 47%;
   }
 
-  @include mqMd {
-    font-size: 45%;
-  }
-
-  @include mqSm {
+  @include mq800 {
     font-size: 40%;
+  }
+
+  @include mq500 {
+    // font-size: 40%;
+  }
+
+  @include mq360 {
+    font-size: 35%;
   }
 }
 

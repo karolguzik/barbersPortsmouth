@@ -35,6 +35,10 @@
     .follow {
       font-size: $default-font-size;
       color: $color-brown;
+
+      @media only screen and (min-width: 768px) and (min-height: 1024px) {
+        font-size: 3rem;
+      }
     }
   }
 }

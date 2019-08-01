@@ -27,26 +27,8 @@
 }
 
 
-@mixin mqXl {
+@mixin mq1600 {
   @media only screen and (max-width: 1600px) {
-    @content;
-  }
-}
-
-@mixin mqLg {
-  @media only screen and (max-width: 1200px) {
-    @content;
-  }
-}
-
-@mixin mqMd {
-  @media only screen and (max-width: 900px) {
-    @content;
-  }
-}
-
-@mixin mqSm {
-  @media only screen and (max-width: 600px) {
     @content;
   }
 }
@@ -57,9 +39,64 @@
   }
 }
 
+@mixin mq1100 {
+  @media only screen and (max-width: 1100px) {
+    @content;
+  }
+}
 
-@mixin mqSet($width, $height) {
-  @media only screen and (width: $width) and (height: $height) {
+@mixin mq900 {
+  @media only screen and (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin mq800 {
+  @media only screen and (max-width: 800px) {
+    @content;
+  }
+}
+
+
+@mixin mq700 {
+  @media only screen and (max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin mq600 {
+  @media only screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin mq500 {
+  @media only screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mq400 {
+  @media only screen and (max-width: 400px) {
+    @content;
+  }
+}
+
+
+@mixin mq360 {
+  @media only screen and (max-width: 360px) {
+    @content;
+  }
+}
+
+@mixin mq320 {
+  @media only screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin mqBoth($width, $height) {
+  @media only screen and (min-width: $width) and (min-height: $height) {
     @content;
   }
 }

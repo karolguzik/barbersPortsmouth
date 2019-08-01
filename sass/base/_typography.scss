@@ -5,44 +5,50 @@ body {
 .heading-primary {
   font-size: 6rem;
   text-transform: uppercase;
-  // text-align: right;
   color: #5c5c5c;
   border-bottom: 4px solid #404040;
 
-  @include mq1300 {
-    font-size: 5.5rem;
-    text-align: center;
-
+  @include mq1100 {
+    font-size: 4.8rem;
   }
 
-  @include mqLg {
-    font-size: 4.6rem;
+  @include mq900 {
+    font-size: 6rem;
+    border: none;
   }
 
-  @include mqMd {
-    & {
-      font-size: 5rem;
-      border: none;
-    }
+  @media only screen and (min-width: 768px) and (min-height: 1024px) {
+    font-size: 10rem;
+    border: none;
+  }
 
-    &--sub {
+  @media only screen and (min-width: 1024px) and (min-height: 1366px) {
+    border: none;
+  }
+
+
+  &--sub {
+    @include mq900 {
       display: block;
       width: 70%;
       margin: 0 auto;
+      text-align: center;
       border-bottom: 4px solid #404040;
     }
-  }
 
-  @include mqSm {
-    font-size: 6.5rem;
-  }
+    @media only screen and (min-width: 1024px) and (min-height: 1366px) {
+      display: block;
+      width: 65%;
+      margin: 0 auto;
+      border-bottom: 4px solid #404040;
+    }
 
-  @include mqSet(320px, 568px) {
-    font-size: 5.2rem;
-  }
-
-  @include mqSet(768px, 1024px) {
-    font-size: 8.5rem;
+    @media only screen and (min-width: 768px) and (min-height: 1024px) {
+      display: block;
+      width: 65%;
+      margin: 0 auto;
+      border-bottom: 4px solid #404040;
+    }
   }
 }
 
@@ -51,9 +57,14 @@ body {
   font-size: 7rem;
   text-transform: uppercase;
 
-  @include mqSet(320px, 568px) {
+  @include mq1100 {
     font-size: 6rem;
   }
+
+  @media only screen and (min-width: 768px) and (min-height: 1024px) {
+    font-size: 7rem;
+  }
+
 
   &>* {
     display: block;
@@ -61,10 +72,6 @@ body {
 
   &--left {
     padding-left: 10rem;
-
-    @include mqSet(320px, 568px) {
-      padding-left: 7rem;
-    }
   }
 
   &--right {
@@ -78,21 +85,30 @@ body {
   margin-bottom: 2rem;
   color: $color-gray-2;
   letter-spacing: .1rem;
+
+  @media only screen and (min-width: 768px) and (min-height: 1024px) {
+    font-size: 4rem;
+  }
 }
 
 
 .paragraph {
   width: 50%;
   margin: 0 auto;
-  font-size: $default-font-size;
+  font-size: 2.2rem;
   line-height: 1.6;
   color: $color-primary;
 
-  @include mqSm {
-    width: 70%;
+
+  @include mq500 {
+    width: 60%;
   }
 
-  @include mqSet(320px, 568px) {
-    width: 60%;
+  @include mqBoth(411px, 731px) {
+    font-size: 2.5rem;
+  }
+
+  @media only screen and (min-width: 768px) and (min-height: 1024px) {
+    font-size: 3rem;
   }
 }

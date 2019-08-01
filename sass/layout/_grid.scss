@@ -13,16 +13,57 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // width: 50%;
+
+  @include mq900 {
+    width: 90%;
+  }
+
+  @include mq700 {
+    width: 100%;
+  }
 }
 
 .gallery {
-  width: 45%;
-  height: 45rem;
+  width: 48%;
+  height: 35rem;
   box-shadow: 0 0 50px 2px $color-black;
+
+  @include mq900 {
+    width: 48%;
+    height: 35rem;
+  }
+
+
+  @include mq800 {
+    width: 55%;
+  }
 
   &:not(:last-child) {
     margin-bottom: -13rem;
+
+    @include mq800 {
+      margin-bottom: 2rem;
+    }
+
+    @include mq600 {
+      margin-bottom: 5rem;
+    }
+  }
+
+  @include mq600 {
+    width: 65%;
+  }
+
+  @include mq500 {
+    width: 80%;
+  }
+
+  @include mq400 {
+    width: 90%;
+  }
+
+  @include mq360 {
+    width: 100%;
   }
 
 
@@ -32,6 +73,19 @@
   &-7,
   &-9 {
     align-self: flex-start;
+
+    @include mq800 {
+      margin-left: 10rem;
+    }
+
+    @include mq600 {
+      margin-left: 0;
+      align-self: center;
+    }
+
+    @include mq360 {
+      margin-left: -2rem;
+    }
   }
 
   &-2,
@@ -39,6 +93,21 @@
   &-6,
   &-8 {
     align-self: flex-end;
+
+
+    @include mq800 {
+      margin-right: 10rem;
+    }
+
+    @include mq600 {
+      align-self: flex-start;
+    }
+
+    @include mq360 {
+      margin-left: 2rem;
+    }
+
+
   }
 
   &>img {
