@@ -35,6 +35,7 @@
   }
 
   &.close {
+    position: fixed !important;
 
     &:hover {
       .btn-line {

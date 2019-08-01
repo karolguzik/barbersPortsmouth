@@ -25,3 +25,41 @@
 @mixin transitionSlower {
   transition: all .25s .15s ease-in-out;
 }
+
+
+@mixin mqXl {
+  @media only screen and (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin mqLg {
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin mqMd {
+  @media only screen and (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin mqSm {
+  @media only screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin mq1300 {
+  @media only screen and (max-width: 1300px) {
+    @content;
+  }
+}
+
+
+@mixin mqSet($width, $height) {
+  @media only screen and (width: $width) and (height: $height) {
+    @content;
+  }
+}

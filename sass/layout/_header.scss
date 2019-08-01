@@ -21,7 +21,6 @@
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: right;
     @include transitionSlower;
 
     &.show {
@@ -44,14 +43,27 @@
   }
 
   &__img {
-    width: 5rem;
-    height: 5rem;
+    width: 6rem;
+    height: 6rem;
+
+    @include mqSet(768px, 1024px) {
+      width: 9rem;
+      height: 9rem;
+    }
+
+    @include mqSet(1024px, 1366px) {
+      width: 12rem;
+      height: 12rem;
+    }
   }
 }
 
 
 .welcome {
   display: inline-block;
+  position: absolute;
+  bottom: -5rem;
+  right: 0;
   margin-right: 3rem;
   margin-top: 1rem;
   padding: 1rem 2rem;
@@ -60,6 +72,20 @@
   color: $color-black;
   background-color: $color-gray-1;
   background-color: rgb(165, 122, 77);
+
+  @include mqSm {
+    font-size: 2.5rem;
+    bottom: -6rem;
+  }
+
+  @include mqSet(320px, 568px) {
+    font-size: 2rem;
+  }
+
+  @include mqSet(768px, 1024px) {
+    font-size: 3rem;
+    bottom: -7rem;
+  }
 }
 
 .scroll {
@@ -67,10 +93,21 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: $color-brown;
-
   @include transitionSlower;
+
+  @include mqSm {
+    font-size: 2.4rem;
+  }
+
+  @include mqSet(320px, 568px) {
+    font-size: 2rem;
+  }
+
+  @include mqSet(768px, 1024px) {
+    font-size: 3rem;
+  }
 
   &.show {
     opacity: 0;

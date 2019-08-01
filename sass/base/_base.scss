@@ -23,10 +23,29 @@ li {
 
 html {
   font-size: 62.5%;
+
+  @include mqXl {
+    font-size: 55%;
+  }
+
+  @include mqLg {
+    font-size: 50%;
+  }
+
+  @include mqMd {
+    font-size: 45%;
+  }
+
+  @include mqSm {
+    font-size: 40%;
+  }
 }
 
 body {
   width: 100%;
   box-sizing: border-box;
-  overflow-x: hidden;
+
+  &.show {
+    position: sticky;
+  }
 }

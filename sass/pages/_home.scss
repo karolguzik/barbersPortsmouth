@@ -1,13 +1,29 @@
+.wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .about {
-  max-width: 1280px;
-  margin: 0 auto;
+  position: relative;
   padding: 10rem;
   height: 100vh;
+
+  @media only screen and (width: 411px) and (height: 731px) {
+    height: 50vh;
+  }
+
+  @include mqSet(320px, 568px) {
+    padding: 5rem;
+  }
+
+  @include mqSet(411px, 731px) {
+    height: auto;
+  }
+
 }
 
 .workshop {
-  // max-width: 1280px;
-  // height: 100vh;
+  width: 100%;
   margin: 0 auto;
   padding: 10rem;
   color: $color-gray-2;
@@ -48,25 +64,10 @@
   }
 }
 
-.side-text {
-  position: absolute;
-  right: 3rem;
-  bottom: 50%;
-  transform: translateY(50%);
-  color: $color-gray-1;
-  writing-mode: vertical-rl;
-  font-size: 2.8rem;
-  letter-spacing: .3rem;
-  text-align: center;
-
-  &--main {
-    font-size: 3.5rem;
-    color: $color-primary;
-  }
-}
 
 
 .contact {
+  width: 100%;
   margin: 0 auto;
   padding: 10rem 5rem;
   background-color: $color-black-light;
@@ -77,6 +78,8 @@
     align-items: center;
     flex-wrap: wrap;
   }
+
+
 }
 
 .details {
@@ -124,12 +127,40 @@
   }
 }
 
-// .contact__social-media {
-//   width: 100%;
-//   padding: 5rem 0;
-//   text-align: center;
 
-//   &>* {
-//     display: inline-block;
-//   }
-// }
+
+.side-text {
+  position: absolute;
+  right: 3rem;
+  bottom: 50%;
+  transform: translateY(50%);
+  color: $color-gray-1;
+  writing-mode: vertical-rl;
+  font-size: 2.8rem;
+  letter-spacing: .3rem;
+  text-align: center;
+  height: 100%;
+
+  @include mqSet(320px, 568px) {
+    height: 80%;
+  }
+
+
+  &--main {
+    font-size: 3.5rem;
+    color: $color-primary;
+    display: inline;
+
+    @include mqSet(320px, 568px) {
+      display: inline;
+    }
+  }
+
+  &--sub {
+    display: inline;
+
+    @include mqSet(320px, 568px) {
+      display: inline;
+    }
+  }
+}

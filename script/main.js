@@ -43,6 +43,7 @@ function show(e) {
   e.preventDefault();
   menuBtn.classList.toggle('close');
   constTab.forEach(el => el.classList.toggle('show'));
+  document.body.classList.toggle('show');
 }
 
 
