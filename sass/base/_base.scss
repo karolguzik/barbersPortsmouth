@@ -36,10 +36,6 @@ html {
     font-size: 40%;
   }
 
-  @include mq500 {
-    // font-size: 40%;
-  }
-
   @include mq360 {
     font-size: 35%;
   }
@@ -50,6 +46,6 @@ body {
   box-sizing: border-box;
 
   &.show {
-    // position: fixed;
+    overflow: hidden;
   }
 }

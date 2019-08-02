@@ -24,7 +24,7 @@ function goToSection() {
       behavior: "smooth",
     });
     setTimeout(show, 100);
-    // show();
+    // show(); 
   } else if (this.textContent === 'workshop') {
     window.scrollTo({
       top: fromTopWorkshop,

@@ -43,17 +43,11 @@
           <use xlink:href="img/sprite.svg#icon-facebook"></use>
         </svg>
       </a>
-        <!-- <a href="https://www.facebook.com/messages/t/Portsmouthhaircut" class="msg">
-        <svg class="msg__icon">
-          <use xlink:href="img/sprite.svg#icon-bubble"></use>
-        </svg>
-      </a> -->
       </div>
     </div>
 
     <header class="header" id="header">
       <div class="header-top">
-        <!-- <div class="menu-btn"><img src="/img/open.png" alt=""></div> -->
         <button class="menu-btn">
           <span class="btn-line"></span>
           <span class="btn-line"></span>
@@ -209,30 +203,15 @@
             </div>
           </div>
 
-          <div class="google-map">
-            <img class="google-map__img" src="img/googlemapblack.jpg" alt="Google Map" class="google-map-img">
+          <div id="map" class="google-map">
+            <!-- <img class=" google-map__img" src="img/googlemapblack.jpg" alt="Google Map" class="google-map-img"> -->
           </div>
-
-          <!-- <div class="contact__social-media">
-          <a href="#" class="fb">
-                <svg class="fb__icon">
-                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-          <a href="#" class="msg">
-                <svg class="msg__icon">
-                  <use xlink:href="img/sprite.svg#icon-bubble"></use>
-                </svg>
-              </a>
-        </div> -->
         </div>
 
         <div class="side-text">
           <p class="side-text--main">Find us</p>
           <p class="side-text--sub">and use our service</p>
         </div>
-
-
       </section>
     </main>
 
@@ -244,11 +223,6 @@
             <use xlink:href="img/sprite.svg#icon-facebook"></use>
           </svg>
         </a>
-        <!-- <a href="https://www.facebook.com/messages/t/Portsmouthhaircut" class="msg">
-          <svg class="msg__icon">
-            <use xlink:href="img/sprite.svg#icon-bubble"></use>
-          </svg>
-        </a> -->
       </div>
     </footer>
   </div>
@@ -256,6 +230,9 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="script/main.js"></script>
+  <script src="script/googlemap.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCucAyw14kaexbqFatnNS3UUCiTGThXCuE&callback=initMap"></script>
 </body>
 
 </html>
