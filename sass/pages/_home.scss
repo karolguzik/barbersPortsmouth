@@ -8,8 +8,6 @@
   padding: 10rem;
   height: 100vh;
 
-
-
   @media only screen and (min-width: 1024px) and (min-height: 768px) {
     height: auto;
   }
@@ -29,14 +27,6 @@
   @include mqBoth(1100px, 731px) {
     height: 100vh;
   }
-
-
-
-
-  // @media only screen and (max-width: 640px) and (orientation: landscape) {
-  //   height: auto;
-  //   padding: 10rem;
-  // }
 }
 
 .workshop {
@@ -52,9 +42,6 @@
 
   .side-text {
     height: 80%;
-    // display: flex;
-    // justify-content: center;
-    // align-self: center;
 
     &--main {
       display: flex;
@@ -184,11 +171,7 @@
       flex-direction: column;
       align-content: center;
     }
-
-
   }
-
-
 }
 
 .details {
@@ -197,13 +180,9 @@
   font-size: 1.8rem;
   font-weight: lighter;
 
-
   &>* {
     margin-bottom: 3.2rem;
   }
-
-
-
 
   @media only screen and (min-width: 768px) and (min-height: 1024px) {
     font-size: 3rem;
@@ -321,13 +300,33 @@
 
 .go-back {
   position: absolute;
-  bottom: 3rem;
-  left: 3rem;
-  z-index: 2;
+  bottom: 3.5rem;
+  left: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  color: $color-brown;
-  font-size: 1.6rem;
+  visibility: hidden;
+  color: $color-primary;
+  font-size: 1.8rem;
+  z-index: 2;
+
+  &:hover {
+    color: $color-gray-3;
+  }
+
+  &:hover &__icon {
+    fill: $color-gray-3;
+  }
+
+  &__icon {
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-top: 1rem;
+    fill: $color-primary;
+    transform: rotate(180deg);
+  }
 }
 
 img {
