@@ -10,21 +10,13 @@
   outline: none;
   overflow: hidden;
   cursor: pointer;
-  // box-shadow: 1px 1px 10px 0 $color-black;
-  // @include transition;
+
 
   @include mq800 {
     width: 35px;
     height: 35px;
   }
 
-  // &:hover {
-  //   // transform: scale(1.05);
-  // }
-
-  // &:active {
-  //   // transform: scale(.95);
-  // }
 
   &>span {
     display: block;

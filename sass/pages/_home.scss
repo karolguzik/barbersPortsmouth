@@ -20,7 +20,7 @@
     height: auto;
   }
 
-  @media only screen and (max-width: 732px) and (orientation: landscape) {
+  @media only screen and (max-width: 736px) and (orientation: landscape) {
     height: auto;
   }
 
@@ -40,13 +40,14 @@
   letter-spacing: .3rem;
   background-color: $color-black-light;
 
+
   .side-text {
     height: 80%;
 
     &--main {
       display: flex;
       justify-content: space-around;
-      color: $color-gray-1;
+      color: $color-gray-3;
     }
 
     &--and {
@@ -122,8 +123,9 @@
   }
 
   &__name {
-    border-right: 1px solid $color-gray-1;
+    color: $color-primary;
     padding-right: 3rem;
+    border-right: 1px solid $color-gray-1;
 
     &>li {
       padding: 1rem;
@@ -195,36 +197,11 @@
 
 }
 
-.address {
-
-  &__title {}
-
-  &__details {}
-}
-
-.phone {
-
-  &__title {}
-
-  &__number {}
-}
-
-
-.open {
-
-  &__title {}
-
-  &__details {}
-}
-
 
 .google-map {
   width: 40%;
   align-self: stretch;
   box-shadow: -3px 3px 20px 0 $color-black;
-
-
-
 
   @include mq900 {
     margin-top: 5rem;
@@ -277,6 +254,7 @@
   bottom: 50%;
   transform: translateY(50%);
   color: $color-gray-1;
+  color: #333;
   writing-mode: vertical-rl;
   font-size: 2.8rem;
   letter-spacing: .3rem;

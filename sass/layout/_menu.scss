@@ -35,6 +35,10 @@
       font-size: 2.5rem;
     }
 
+    @media only screen and (min-width: 768px) and (min-height: 1024px) {
+      font-size: 4rem;
+    }
+
     &.show {
       opacity: 1;
     }
@@ -44,6 +48,10 @@
       font-size: $default-font-size;
       color: $color-gray-1;
       text-align: right;
+
+      @media only screen and (min-width: 768px) and (min-height: 1024px) {
+        font-size: 3rem;
+      }
     }
   }
 
@@ -52,12 +60,14 @@
     margin-top: 5rem;
     align-self: center;
     transform: translate3d(142px, 0, 0);
-    @include transition;
     opacity: 0;
+    @include transition;
 
-    @media only screen and (max-width: 1023px) and (max-height: 768px) {
-      margin-top: 2rem;
+    @media only screen and (max-width:1100px) {
+      margin-top: 3rem;
     }
+
+
 
     &.show {
       transform: translate3d(0, 0, 0);
@@ -83,9 +93,15 @@
       overflow: hidden;
       @include transition;
 
-      @media only screen and (max-width: 1023px) and (max-height: 768px) {
-        font-size: 3.8rem;
+
+      @media only screen and (max-width: 824px) and (max-height: 415px) {
+        font-size: 3.5rem;
       }
+
+      @media only screen and (min-width: 768px) and (min-height: 1024px) {
+        font-size: 8rem;
+      }
+
 
       &::before {
         content: '';
@@ -122,8 +138,12 @@
     background-color: $color-gray-1;
     color: $color-black-light;
 
-    @media only screen and (max-width: 1023px) and (max-height: 768px) {
-      font-size: 2.5rem;
+    @media only screen and (max-width: 824px) and (max-height: 415px) {
+      font-size: 2rem;
+    }
+
+    @media only screen and (min-width: 768px) and (min-height: 1024px) {
+      font-size: 5rem;
     }
   }
 
@@ -153,9 +173,14 @@
     font-size: 2.5rem;
     color: $color-brown;
     writing-mode: vertical-rl;
+
+    @media only screen and (max-width: 824px) and (max-height: 415px) {
+      font-size: 1.8rem;
+    }
+
+    @media only screen and (min-width: 768px) and (min-height: 1024px) {
+      font-size: 3.5rem;
+    }
   }
 
-  @media only screen and (max-width: 1023px) and (max-height: 768px) {
-    font-size: 2rem;
-  }
 }
