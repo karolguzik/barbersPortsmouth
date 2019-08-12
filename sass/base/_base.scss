@@ -23,6 +23,7 @@ li {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 
   @include mq1600 {
     font-size: 55%;
